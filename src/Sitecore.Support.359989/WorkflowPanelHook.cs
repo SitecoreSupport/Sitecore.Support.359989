@@ -18,7 +18,6 @@
         {
             this._coreDatabaseName = coreDatabaseName;
             this._workflowPanelItemID = pathToWorkflowPanelItem;
-            Log.Info("In WorkflowPanelHook constructor", this);
         }
 
         public void Initialize()
