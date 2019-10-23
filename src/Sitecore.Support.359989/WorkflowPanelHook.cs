@@ -14,10 +14,10 @@
     {
         private string _coreDatabaseName;
         private string _workflowPanelItemID;
-        public WorkflowPanelHook(string coreDatabaseName, string pathToWorkflowPanelItem)
+        public WorkflowPanelHook(string coreDatabaseName, string workflowPanelItemID)
         {
             this._coreDatabaseName = coreDatabaseName;
-            this._workflowPanelItemID = pathToWorkflowPanelItem;
+            this._workflowPanelItemID = workflowPanelItemID;
         }
 
         public void Initialize()
@@ -29,7 +29,7 @@
                 Item workflowPanel = database.GetItem(new ID(_workflowPanelItemID));
 
                 workflowPanel.Editing.BeginEdit();
-                workflowPanel.Fields["Type"].Value = "CommandTest.CustomWorkflowPanel,CommandTest";
+                workflowPanel.Fields["Type"].Value = "Sitecore.Support.Shell.Applications.ContentManager.Panels.WorkflowPanel,Sitecore.Support.359989";
                 workflowPanel.Editing.EndEdit();
             }
         }
