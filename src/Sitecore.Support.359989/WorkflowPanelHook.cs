@@ -28,9 +28,12 @@
             {
                 Item workflowPanel = database.GetItem(new ID(_workflowPanelItemID));
 
-                workflowPanel.Editing.BeginEdit();
-                workflowPanel.Fields["Type"].Value = "Sitecore.Support.Shell.Applications.ContentManager.Panels.WorkflowPanel,Sitecore.Support.359989";
-                workflowPanel.Editing.EndEdit();
+                if (workflowPanel.Fields["Type"].Value != "Sitecore.Support.Shell.Applications.ContentManager.Panels.WorkflowPanel,Sitecore.Support.359989")
+                {
+                    workflowPanel.Editing.BeginEdit();
+                    workflowPanel.Fields["Type"].Value = "Sitecore.Support.Shell.Applications.ContentManager.Panels.WorkflowPanel,Sitecore.Support.359989";
+                    workflowPanel.Editing.EndEdit();
+                }
             }
         }
     }
