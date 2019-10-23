@@ -1,5 +1,5 @@
 # Sitecore.Support.359989
-Fix 'item:checkin' is shown for the fallback version.
+Hide 'Workflow' chunk and disable 'Edit' button on Ribbon when the fallback version is shown.
 
 ## License  
 This patch is licensed under the [Sitecore Corporation A/S License for GitHub](https://github.com/sitecoresupport/Sitecore.Support.359989/blob/master/LICENSE).  
